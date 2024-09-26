@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Navigācijas Izvēlne</title>
+  <style>
+    /* Style the navigation menu */
+    .nav-menu {
+      list-style-type: none;
+      margin: 10px 0;
+      padding: 0 20px; /* Added padding to give space on the left */
+      border-radius: 14px;
+      background-color: #41B3A2;
+      display: flex;
+      justify-content: flex-start; /* Align items to the left */
+      align-items: center;
+    }
+
+    .nav-menu li {
+      position: relative;
+      margin-right: 15px; /* Spacing between menu items */
+    }
+
+    .nav-menu li a {
+      display: block;
+      color: white;
+      text-align: center;
+      border-radius: 14px;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Add a background color on hover */
+    .nav-menu li a:hover {
+      background-color: #BDE8CA;
+      border-radius: 14px;
+    }
+
+    /* Dropdown container - hide content by default */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      border-radius: 14px;
+      background-color: #41B3A2;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Ensure each dropdown item takes up full row */
+    .dropdown-content li {
+      width: 100%;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content li a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left; /* Keep dropdown items aligned to the left */
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content li a:hover {
+      background-color: #BDE8CA;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    /* Style the dropdown button */
+    .dropbtn {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      background-color: #41B3A2;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #BDE8CA;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Services</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">SEO Services</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+
+
+
+<!-- Pievieno Dropdown izvēlni:
+    •    Papildini esošo navigācijas izvēlni ar dropdown funkcionalitāti.
+    Kad lietotājs pārbrauc ar peli pār izvēlnes elementu “Services”,
+    jāparādās papildu apakšizvēlnei ar vairākām iespējām.    -->
+
+
+<!-- Pievieno modālo logu (Modal):
+    •    Pievieno iespēju, ka, klikšķinot uz kartītes pogas (“Learn More”),
+    atveras modālais logs, kurā ir detalizētāka informācija par kartiņas saturu.
+
+    Pievieno animāciju hover efektam:
+    •    Pielieto CSS Keyframe animācijas, lai kartīšu hover efekti būtu vēl interesantāki.
+    Piemēram, kartītes attēlam vajadzētu lēnām palielināties (zoom-in) vai mainīt izskatu.
+
+    Pievieno gradientus un pārejas:
+    •    Pievieno CSS gradientus kartītēm vai pogām, kas vizuāli uzlabo dizainu.
+    Izmanto gradientu pārejas uz pogām hover efektos, lai mainītu pogas krāsu.
+
+    Izveido responsīvu hamburgera izvēlni:
+    •    Izveido hamburgera izvēlni, kas parādās mobilajās ierīcēs, aizstājot navigācijas joslu.
+    Kad lietotājs klikšķina uz hamburgera ikonas, parādās izvelkamā izvēlne. -->
